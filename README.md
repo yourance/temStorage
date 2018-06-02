@@ -1,0 +1,3 @@
+# temStorage
+animationWork
+telephoneAnimation
