@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+        <title></title>
+        <!-- <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.css" rel="stylesheet"> -->
+        <style media="screen">
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            html{
+                width:100%;
+                overflow-x:hidden;
+            }
+            html {
+                font-size : 20px;
+                }
+                /*@media only screen and (min-width: 401px){
+                html {
+                    font-size: 25px !important;
+                }
+                }
+                @media only screen and (min-width: 428px){
+                html {
+                    font-size: 26.75px !important;
+                }
+                }
+                @media only screen and (min-width: 481px){
+                html {
+                    font-size: 30px !important;
+                }
+                }
+                @media only screen and (min-width: 569px){
+                html {
+                    font-size: 35px !important;
+                }
+                }
+                @media only screen and (min-width: 641px){
+                html {
+                    font-size: 40px !important;
+                }
+            }*/
+            .screen{
+                margin:auto;
+                padding: 0;
+                /*width: 96rem;*/
+                background: -webkit-linear-gradient(left top,#565452,#353a3d);
+                /*background: -webkit-linear-gradient(left,#565452,#353a3d);*/
+
+            }
+            .footer{
+                /*width: 1080px; height450px*/
+                height: 22.5rem;
+                margin: auto;
+                /*text-align: center;  20 30 20*/
+                padding: 1rem 1.5rem 1rem;
+                /*background:-moz-linear-gradient( left,#7a7c7f,#272727);*/
+
+                /*background: -o-linear-gradient(left,#7a7c7f, #272727);*/
+            }
+            .shang{
+                /*920px 180px 90*/
+                width: 46rem;
+                height: 9rem;
+                /*background-color: #2c3035;*/
+                border-radius: 4.5rem;
+                margin: auto;
+                /*0 4 40*/
+                background: -webkit-linear-gradient(left,rgba(0,0,0,0.02),rgba(0,0,0,0.1),rgba(0,0,0,0.02));
+                /*background: -o-linear-gradient(right,rgba(0,0,0,0.02),rgba(0,0,0,0.1));
+                background: -moz-linear-gradient(right,rgba(0,0,0,0.02),rgba(0,0,0,0.1));
+                background: linear-gradient(to right, rgba(0,0,0,0.02), rgba(0,0,0,0.1)); */
+                /*box-shadow: 0rem 0.2rem 2rem rgba(0, 0, 0, 0.1);*/
+
+            }
+            .vs{
+                margin: 0;
+                padding: 0;
+                background-color: #f56005;
+                position: absolute;
+                box-shadow: 0rem 0.2rem 2rem rgba(0, 0, 0, 0.3);
+                /*margin-right: -300px;*/
+                /*180  180 90*/
+                width: 9rem;
+                height: 9rem;
+                border-radius: 4.5rem;
+                /*transform: translateX(-50%);*/
+            }
+            .zo,.vs,.yb{
+                display: inline-block;
+            }
+            .zo{
+                margin: 0;
+                padding: 0;
+                /*margin-left: -60px;*/
+                float: left;
+            }
+            .yb{
+                margin: 0;
+                padding: 0;
+                float: right;
+                margin-right: 0px;
+                /*-50*/
+                top: -2.5rem;
+            }
+            .zo-index,.yb-index{
+                display: inline-block;
+                margin: 0px;
+                padding-bottom: 0px;
+                transform: translateY(50%);
+
+            }
+            .zo-index{
+                /*88*/
+                /*margin-right: 4.4rem;*/
+                /*padding-right: 1px;*/
+                position: relative;
+                right: 0.5rem;
+            }
+            .yb-index{
+                position: relative;
+                left: 10rem;
+                /*88*/
+                /*margin-left: 4.4rem;*/
+                /*padding-left: 1px;*/
+            }
+            .index{
+                /*15 30 30 15 70*/
+                display:inline-block;
+                margin: 0.75rem;
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 0.75rem;
+                background-color: #fff;
+                margin-bottom: 3.5rem;
+                opacity: 1;
+            }
+            .item1{
+                animation: change linear 1.2s;
+                animation-iteration-count: infinite;
+            }
+            .item2{
+                animation: change2 linear 1.2s;
+                animation-iteration-count: infinite;
+            }
+            .item3{
+                animation: change3 linear 1.2s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes change{
+                0%{
+                    opacity: 0.02
+                }
+                16.7%{
+                    opacity: 0.02
+                }
+                33%{
+                    opacity: 0.02
+                }
+                50%{
+                    opacity: 0.1
+                }
+                66.7%{
+                    opacity: 0.2
+                }
+                83.3%{
+                    opacity: 0.2
+                }
+                100%{
+                    opacity: 0.02
+                }
+
+            }
+            @keyframes change2{
+                0%{
+                    opacity: 0.02
+                }
+                16.7%{
+                    opacity: 0.02
+                }
+                33%{
+                    opacity: 0.1
+                }
+                50%{
+                    opacity: 0.2
+                }
+                66.7%{
+                    opacity: 0.1
+                }
+                83.3%{
+                    opacity: 0.02
+                }
+                100%{
+                    opacity: 0.02
+                }
+
+            }
+            @keyframes change3{
+                0%{
+                    opacity: 0.02
+                }
+                16.7%{
+                    opacity: 0.1
+                }
+                33%{
+                    opacity: 0.2
+                }
+                50%{
+                    opacity: 0.1
+                }
+                66.7%{
+                    opacity: 0.02
+                }
+                83.3%{
+                    opacity: 0.02
+                }
+                100%{
+                    opacity: 0.02
+                }
+
+            }
+            #xwtext{
+                /*30 30*/
+                font-size: 1.5rem;
+                color: #DDD;
+                text-align: center;
+                margin-top: 1.5rem;
+                margin-left: 1rem;
+                /*padding-left: 78px*/
+
+            }
+            span{
+                /*0 20 0 20*/
+                margin:0rem 0.5rem 0rem 0.5rem;
+            }
+            .tbxd{
+                /*1080 1468*/
+                width: 54rem;
+                height: 73.5rem;
+                color: #fff;
+                margin: auto;
+
+            }
+            .first{
+                font-size: 50px;
+                text-align: center;
+                margin:0;
+                padding-top: 2.5rem;
+            }
+            #headimg{
+                width: 15rem;
+                height: 15rem;
+                border-radius: 7.5rem;
+                background-color: #f7f7f7;
+                margin: auto;
+                /*137*/
+                margin-top: 6.8rem;
+            }
+            .two{
+                /*306 153*/
+                font-size: 3rem;
+                margin: auto;
+                width: 15rem;
+                height: 7.5rem;
+                text-align: center;
+                padding-top: 3.25rem
+
+            }
+            .three{
+                font-size: 2.4rem;
+                margin: auto;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="screen">
+            <!-- <div class="tbxd">
+                <p class="first">
+                    语音聊天
+                </p>
+                <div class="" id=headimg>
+
+                    <img  src="" alt="" />
+                </div>
+                <p class="two">
+                    王英豪
+                </p>
+                <p class="three">
+                    20010020847
+                </p>
+            </div> -->
+            <div class="footer">
+                <div class="shang">
+                    <div class="zo">
+                        <img src="images/slidstop.png" alt="" />
+                    </div>
+                    <div class="zo-index">
+                        <div class="index item1"></div>
+                        <div class="index item2"></div>
+                        <div class="index item3"></div>
+                    </div>
+                    <div class="vs">
+                        <img src="images/slidindex.png" alt="" />
+                    </div>
+                    <div class="yb-index">
+                        <div class="index item3"></div>
+                        <div class="index item2"></div>
+                        <div class="index item1"></div>
+                    </div>
+                    <div class="yb">
+                        <img src="images/slidjxt.png" alt="" />
+                    </div>
+                </div>
+                <div id="xwtext">
+                    <span class="span1">左滑挂断</span>
+                    <span class="span2">右滑接听</span>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script type="text/javascript">
+    var log = console.log.bind(console)
+
+    var e = function(selector) {
+        var element = document.querySelector(selector)
+        return element
+    }
+
+    // es 返回一个数组，包含所有被选中的元素
+    var es = function(selector) {
+        var elements = document.querySelectorAll(selector)
+        return elements
+    }
+
+    // bindAll 给所有的元素绑定事件
+    var bindAll = function(elements, eventName, callback) {
+        for (var i = 0; i < elements.length; i++) {
+            var tag = elements[i]
+            tag.addEventListener(eventName, callback)
+        }
+    }
+    var slider = e('.vs')
+    var startX
+    var midX
+    slider.addEventListener('touchstart',function(event) {
+        log('start slider.style.left',window.getComputedStyle(slider,null).left)
+         var e = event || window.event
+         startX = event.targetTouches[0].pageX
+        //  var start2x = event.changedTouches[0].pageX
+         log('startX',startX)
+    })
+    var zobm = e('.zo')
+    var zospam = e('.span1')
+    var ybbm = e('.yb')
+    var ybspam = e('.span2')
+    // log('zobm',window.getComputedStyle(zobm,null).opacity)
+    var intDistance = function() {
+        return
+    }
+    slider.addEventListener('touchmove',function(event) {
+        // log('2slider.style.left',window.getComputedStyle(slider,null).left)
+         var e = event || window.event
+         midX = event.targetTouches[0].pageX
+        //  return (event.targetTouches[0].pageX < 604) & (event.targetTouches[0].pageX > 435)
+         //计算偏移距离
+          var distancex = Math.abs(midX - startX)
+        //  log('midX,distancex',midX,distancex)
+         var intDistance = function() {
+             return 1
+         }
+         if ((midX - startX) > 0 & intDistance() & window.getComputedStyle(slider,null).left !== '790px') {
+            //  alert('移除')left:${25-distancex/20}rem
+            // log('intDistance',intDistance())
+            // yb slider.style.left 790px
+            // yb slider.style.left 30px
+            slider.style.cssText=`left:${25+distancex/20}rem`
+            if (distancex > 280) {
+                slider.style.cssText='left:39.5rem'
+                zobm.style.cssText='opacity:0.2'
+                zospam.style.cssText='opacity:0.2'
+                log('yb slider.style.left',window.getComputedStyle(slider,null).left)
+            }
+
+             event.preventDefault()
+             event.stopPropagation()
+             slider.removeEventListener('touchmove',function(){alert('1')})
+            //  log('slider.style.left',window.getComputedStyle(slider,null).left)
+            //  slider.removeEventListener('touchmove',function() {alert('移除')})
+        }else if ((midX - startX) < 0 & intDistance() & window.getComputedStyle(slider,null).left !== '30px') {
+            slider.style.cssText=`left:${25-distancex/20}rem`
+            if (distancex > 440) {
+                slider.style.cssText='left:1.5rem'
+                ybbm.style.cssText='opacity:0.2'
+                ybspam.style.cssText='opacity:0.2'
+                log('slider.style.left',window.getComputedStyle(slider,null).left)
+            }
+             event.preventDefault()
+             event.stopPropagation()
+             slider.removeEventListener('touchmove',function(){alert('1')})
+         }else {
+
+         }
+        //  window.getComputedStyle(slider,null).left = (490 + distancex) / 920
+    })
+    slider.addEventListener('touchend',function(event) {
+        var e = event || window.event
+        var miidX = event.changedTouches[0].pageX
+       //  return (event.targetTouches[0].pageX < 604) & (event.targetTouches[0].pageX > 435)
+        //计算偏移距离
+         var distancex = Math.abs(miidX - startX)
+         if (distancex <= 440 & (midX - startX) < 0) {
+             slider.style.cssText='left:869.25'
+         }else if (distancex <= 280 & (midX - startX) > 0) {
+             slider.style.cssText='left:869.25'
+         }
+         event.preventDefault()
+         event.stopPropagation()
+         slider.removeEventListener('touchmove',function(){alert('1')})
+    })
+
+    </script>
+</html>
