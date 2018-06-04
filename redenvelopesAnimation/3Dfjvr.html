@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.js"></script>
+        <link rel="stylesheet" href="animate.min.css">
+        <title>CSS3 翻转效果 </title>
+        <link rel="stylesheet" href="fanzhuan.css" type="text/css" />
+        <style>
+            #box {
+                width: 355px;
+                height: 500px;
+                margin: 30px auto;
+                position: relative;
+                /*border: 1px solid red;*/
+            }
+
+            .list {
+                position: absolute;
+            }
+
+            .list img {
+                border-radius: 2px;
+            }
+            button{
+                background: yellow;
+                width: 100px;
+                height: 50px;
+                margin:auto;
+                bottom: 30px;
+                position: absolute;
+                left: 0;
+                right: 0;
+            }
+            @keyframes swing {
+              20% {
+                transform: rotate3d(0, 0, 1, 15deg);
+              }
+
+              40% {
+                transform: rotate3d(0, 0, 1, -10deg);
+              }
+
+              60% {
+                transform: rotate3d(0, 0, 1, 5deg);
+              }
+
+              80% {
+                transform: rotate3d(0, 0, 1, -5deg);
+              }
+
+              to {
+                transform: rotate3d(0, 0, 1, 0deg);
+              }
+            }
+            .swing {
+              transform-origin: bottom; center;
+              animation-name: swing;
+            }
+            .hiden{
+                display: none;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <!-- <h1>必须给要翻转的添加flip类</h1> -->
+                <div id="box">
+                    <span class="list flip out"><img src="E:\我的个人文档\新写红包动画\images\red-w.png" alt="纸牌正面" /></span>
+
+                    <span class="list flip"><img src="E:\我的个人文档\新写红包动画\images\red-y.png" alt="纸牌背面" />  <button type="button" name="button"></button></span>
+                </div>
+    <script>
+    var log = console.log.bind(console)
+
+    var e = function(selector) {
+        var element = document.querySelector(selector)
+        return element
+    }
+    $('#box').addClass('animated zoomIn')
+    // $('.btn').click($('.only').addClass('swing'))
+    e('button').addEventListener('click', function(event) {
+        var self = event.target
+        var kdom = self.closest('#box')
+        kdom.classList.add('swing')
+        self.remove()
+        log('fadeout',self.classList)
+        setTimeout(function () {
+            threeD()
+       }, 1000);
+    })
+    // var funBackOrFront = function() {
+    //     var eleBack = null,
+    //         eleFront = null,
+    //             // 纸牌元素们
+    //         eleList = $(".list")
+    //         eleList.each(function() {
+    //                     if ($(this).hasClass("out")) {
+    //                         eleBack = $(this);
+    //                     } else {
+    //                         eleFront = $(this);
+    //                     }
+    //                 })
+    // }
+    var threeD = function() {
+        var eleBack = null,
+            eleFront = null,
+                // 纸牌元素们
+            eleList = $(".list")
+            eleList.each(function() {
+                        if ($(this).hasClass("out")) {
+                            eleBack = $(this);
+                        } else {
+                            eleFront = $(this);
+                        }
+                    })
+        eleFront.addClass("out").removeClass("in");
+               setTimeout(function() {
+                   eleBack.addClass("in").removeClass("out");
+                   // 重新确定正反元素
+                //    funBackOrFront();
+               }, 225)
+    }
+        // $(function() {
+        //     // 在前面显示的元素，隐藏在后面的元素
+        //     var eleBack = null,
+        //         eleFront = null,
+        //         // 纸牌元素们
+        //         eleList = $(".list");
+        //     // 确定前面与后面元素
+        //     var funBackOrFront = function() {
+        //         eleList.each(function() {
+        //             if ($(this).hasClass("out")) {
+        //                 eleBack = $(this);
+        //             } else {
+        //                 eleFront = $(this);
+        //             }
+        //         });
+        //     };
+        //     funBackOrFront();
+        //
+        //     $("#box").hover(function() {
+        //         // 切换的顺序如下
+        //         // 1. 当前在前显示的元素翻转90度隐藏, 动画时间225毫秒
+        //         // 2. 结束后，之前显示在后面的元素逆向90度翻转显示在前
+        //         // 3. 完成翻面效果
+        //         eleFront.addClass("out").removeClass("in");
+        //         setTimeout(function() {
+        //             eleBack.addClass("in").removeClass("out");
+        //             // 重新确定正反元素
+        //             funBackOrFront();
+        //         }, 225);
+        //
+        //
+        //         return false;
+        //     });
+        // })
+    </script>
+    </body>
+
+</html>
